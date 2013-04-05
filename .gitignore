@@ -1,0 +1,26 @@
+#
+# Visual Studio
+#
+
+*.aps
+[Dd]ebug/
+[Rr]elease/
+*.idb
+*.ilk
+*.map
+*.opt
+*.plg
+*.ncb
+*.res
+*.sdf
+*.suo
+*.vcxproj.user
+*.vcxprojResolveAssemblyReference.cache
+
+
+#
+# CVS
+#
+
+*.scc
+*.vspscc

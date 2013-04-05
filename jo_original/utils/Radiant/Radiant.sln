@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Radiant", "Radiant.vcxproj", "{56CE37A2-2678-92D6-3D81-525BD510F230}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA} = {DD09F337-E9A1-16B0-49A4-D16B55D8BADA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pak", "..\Libs\pak\pak.vcxproj", "{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Q3Debug|Win32 = Q3Debug|Win32
+		Q3Release|Win32 = Q3Release|Win32
+		Release|Win32 = Release|Win32
+		Template|Win32 = Template|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Debug|Win32.ActiveCfg = Q3Debug|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Debug|Win32.Build.0 = Q3Debug|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Q3Debug|Win32.ActiveCfg = Q3Debug|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Q3Debug|Win32.Build.0 = Q3Debug|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Q3Release|Win32.ActiveCfg = Q3Release|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Q3Release|Win32.Build.0 = Q3Release|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Release|Win32.ActiveCfg = Q3Release|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Release|Win32.Build.0 = Q3Release|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Template|Win32.ActiveCfg = Template|Win32
+		{56CE37A2-2678-92D6-3D81-525BD510F230}.Template|Win32.Build.0 = Template|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Debug|Win32.Build.0 = Debug|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Q3Debug|Win32.ActiveCfg = Debug|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Q3Debug|Win32.Build.0 = Debug|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Q3Release|Win32.ActiveCfg = Release|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Q3Release|Win32.Build.0 = Release|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Release|Win32.ActiveCfg = Release|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Release|Win32.Build.0 = Release|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Template|Win32.ActiveCfg = Template|Win32
+		{DD09F337-E9A1-16B0-49A4-D16B55D8BADA}.Template|Win32.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

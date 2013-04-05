@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Q3Debug|Win32">
+      <Configuration>Q3Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Q3Release|Win32">
+      <Configuration>Q3Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+    <OutDir>.\Q3Release\</OutDir>
+    <IntDir>.\Q3Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+    <OutDir>.\Q3Debug\</OutDir>
+    <IntDir>.\Q3Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;QUAKE3;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Q3Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Q3Release\Radiant.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Q3Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Q3Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Q3Release\Radiant.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Q3Release\Radiant.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc.lib msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>Q3Release/chcRadiant.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;..\libs\pak.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;QUAKE3;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Q3Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Q3Debug\Radiant.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Q3Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Q3Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Q3Debug\Radiant.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Q3Debug\Radiant.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libc.lib msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>Q3Debug/chcRadiant.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;..\libs\pakd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bmp.cpp" />
+    <ClCompile Include="brush.cpp" />
+    <ClCompile Include="cmdlib.cpp" />
+    <ClCompile Include="csg.cpp" />
+    <ClCompile Include="drag.cpp" />
+    <ClCompile Include="eclass.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="lbmlib.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="mathlib.cpp" />
+    <ClCompile Include="mru.cpp" />
+    <ClCompile Include="parse.cpp" />
+    <ClCompile Include="points.cpp" />
+    <ClCompile Include="qe3.cpp" />
+    <ClCompile Include="select.cpp" />
+    <ClCompile Include="vertsel.cpp" />
+    <ClCompile Include="win_dlg.cpp" />
+    <ClCompile Include="win_ent.cpp" />
+    <ClCompile Include="win_main.cpp" />
+    <ClCompile Include="win_qe3.cpp" />
+    <ClCompile Include="z.cpp" />
+    <ClCompile Include="fnmatch.cpp" />
+    <ClCompile Include="inc.cpp" />
+    <ClCompile Include="Quake3\cbrush.cpp" />
+    <ClCompile Include="Quake3\pmesh.cpp" />
+    <ClCompile Include="jpeg-6\jcomapi.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdapimin.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdapistd.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdatasrc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdcoefct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdcolor.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jddctmgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdhuff.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdinput.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdmainct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdmarker.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdmaster.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdpostct.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdsample.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jdtrans.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jerror.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jidctflt.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jmemmgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jmemnobs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="jpeg-6\jutils.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="autocaulk.cpp" />
+    <ClCompile Include="BrushScript.cpp" />
+    <ClCompile Include="BSInput.cpp" />
+    <ClCompile Include="CamWnd.cpp" />
+    <ClCompile Include="CapDialog.cpp" />
+    <ClCompile Include="cbrushstub.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CommandsDlg.cpp" />
+    <ClCompile Include="DialogInfo.cpp" />
+    <ClCompile Include="DialogTextures.cpp" />
+    <ClCompile Include="DialogThick.cpp" />
+    <ClCompile Include="EditWnd.cpp" />
+    <ClCompile Include="EntityListDlg.cpp" />
+    <ClCompile Include="EntKeyFindReplace.cpp" />
+    <ClCompile Include="FindTextureDlg.cpp" />
+    <ClCompile Include="GetString.cpp" />
+    <ClCompile Include="groupnames.cpp" />
+    <ClCompile Include="JPGFile.cpp" />
+    <ClCompile Include="LstToolBar.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MapInfo.cpp" />
+    <ClCompile Include="NewProjDlg.cpp" />
+    <ClCompile Include="oddbits.cpp" />
+    <ClCompile Include="PatchDensityDlg.cpp" />
+    <ClCompile Include="PlugIn.cpp" />
+    <ClCompile Include="PlugInManager.cpp" />
+    <ClCompile Include="PrefsDlg.cpp" />
+    <ClCompile Include="qgl_win.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="radbsp.cpp" />
+    <ClCompile Include="RADEditWnd.cpp" />
+    <ClCompile Include="Radiant.cpp" />
+    <ClCompile Include="RotateDlg.cpp" />
+    <ClCompile Include="ScaleDialog.cpp" />
+    <ClCompile Include="ScriptDlg.cpp" />
+    <ClCompile Include="ShaderInfo.cpp" />
+    <ClCompile Include="sourcesafe.cpp" />
+    <ClCompile Include="SourceSafeSettings.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Q3Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Q3Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SurfaceDlg.cpp" />
+    <ClCompile Include="TexEdit.cpp" />
+    <ClCompile Include="TextureBar.cpp" />
+    <ClCompile Include="TextureLayout.cpp" />
+    <ClCompile Include="TexWnd.cpp" />
+    <ClCompile Include="XYWnd.cpp" />
+    <ClCompile Include="zclip.cpp" />
+    <ClCompile Include="ZWnd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="jpeg-6\jconfig.h" />
+    <ClInclude Include="jpeg-6\jdct.h" />
+    <ClInclude Include="jpeg-6\jdhuff.h" />
+    <ClInclude Include="jpeg-6\jerror.h" />
+    <ClInclude Include="jpeg-6\jinclude.h" />
+    <ClInclude Include="jpeg-6\jmemsys.h" />
+    <ClInclude Include="jpeg-6\jmorecfg.h" />
+    <ClInclude Include="jpeg-6\jpegint.h" />
+    <ClInclude Include="jpeg-6\jpeglib.h" />
+    <ClInclude Include="jpeg-6\jversion.h" />
+    <ClInclude Include="JPGFile.h" />
+    <ClInclude Include="3DFXCamWnd.h" />
+    <ClInclude Include="autocaulk.h" />
+    <ClInclude Include="BMP.H" />
+    <ClInclude Include="BRUSH.H" />
+    <ClInclude Include="BSInput.h" />
+    <ClInclude Include="CAMERA.H" />
+    <ClInclude Include="CamWnd.h" />
+    <ClInclude Include="CapDialog.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CMDLIB.H" />
+    <ClInclude Include="CommandsDlg.h" />
+    <ClInclude Include="DialogInfo.h" />
+    <ClInclude Include="DialogTextures.h" />
+    <ClInclude Include="DialogThick.h" />
+    <ClInclude Include="EditWnd.h" />
+    <ClInclude Include="ENTITY.H" />
+    <ClInclude Include="EntityListDlg.h" />
+    <ClInclude Include="ENTITYW.H" />
+    <ClInclude Include="EntKeyFindReplace.h" />
+    <ClInclude Include="FindTextureDlg.h" />
+    <ClInclude Include="FNMATCH.H" />
+    <ClInclude Include="GetString.h" />
+    <ClInclude Include="groupnames.h" />
+    <ClInclude Include="INC.H" />
+    <ClInclude Include="LBMLIB.H" />
+    <ClInclude Include="LstToolBar.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MAP.H" />
+    <ClInclude Include="MapInfo.h" />
+    <ClInclude Include="MATHLIB.H" />
+    <ClInclude Include="MRU.H" />
+    <ClInclude Include="NewProjDlg.h" />
+    <ClInclude Include="oddbits.h" />
+    <ClInclude Include="..\Libs\pakstuff.h" />
+    <ClInclude Include="PARSE.H" />
+    <ClInclude Include="PatchDensityDlg.h" />
+    <ClInclude Include="PlugIn.h" />
+    <ClInclude Include="PlugInManager.h" />
+    <ClInclude Include="PrefsDlg.h" />
+    <ClInclude Include="qe3.h" />
+    <ClInclude Include="QEDEFS.H" />
+    <ClInclude Include="qerplugin.h" />
+    <ClInclude Include="QERTYPES.H" />
+    <ClInclude Include="QFILES.H" />
+    <ClInclude Include="QGL.H" />
+    <ClInclude Include="RADEditWnd.h" />
+    <ClInclude Include="Radiant.h" />
+    <ClInclude Include="RadiantDoc.h" />
+    <ClInclude Include="RadiantView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RotateDlg.h" />
+    <ClInclude Include="ScaleDialog.h" />
+    <ClInclude Include="ScriptDlg.h" />
+    <ClInclude Include="SELECT.H" />
+    <ClInclude Include="ShaderInfo.h" />
+    <ClInclude Include="sourcesafe.h" />
+    <ClInclude Include="SourceSafeSettings.h" />
+    <ClInclude Include="ssauterr.h" />
+    <ClInclude Include="ssauto.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SurfaceDlg.h" />
+    <ClInclude Include="TexEdit.h" />
+    <ClInclude Include="TextureBar.h" />
+    <ClInclude Include="TextureLayout.h" />
+    <ClInclude Include="Textures.h" />
+    <ClInclude Include="TexWnd.h" />
+    <ClInclude Include="XY.H" />
+    <ClInclude Include="XYWnd.h" />
+    <ClInclude Include="Z.H" />
+    <ClInclude Include="zclip.h" />
+    <ClInclude Include="ZWnd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\bevel.bmp" />
+    <CustomBuild Include="res\bitmap2.bmp" />
+    <CustomBuild Include="res\bmp00001.bmp" />
+    <CustomBuild Include="res\bmp00002.bmp" />
+    <CustomBuild Include="res\endcap.bmp" />
+    <CustomBuild Include="res\ibevel.bmp" />
+    <CustomBuild Include="res\iendcap.bmp" />
+    <CustomBuild Include="res\logo_sm3dfx.bmp" />
+    <CustomBuild Include="res\q.bmp" />
+    <CustomBuild Include="res\Radiant.ico" />
+    <CustomBuild Include="res\Radiant.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\RadiantDoc.ico" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="res\toolbar1.bmp" />
+    <CustomBuild Include="res\toolbar2.bmp" />
+    <CustomBuild Include="res\viewdefa.bmp" />
+    <CustomBuild Include="res\viewoppo.bmp" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Radiant.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
