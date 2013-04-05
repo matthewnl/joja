@@ -810,7 +810,7 @@ static qboolean NPC_ST_InvestigateEvent( int eventID, bool extraSuspicious )
 			trace_t	trace;
 			VectorCopy( NPCInfo->investigateGoal, end );
 			end[2] -= 512;//FIXME: not always right?  What if it's even higher, somehow?
-			gi.trace( &trace, NPCInfo->investigateGoal, NPC->mins, NPC->maxs, end, ENTITYNUM_NONE, ((NPC->clipmask&~CONTENTS_BODY)|CONTENTS_BOTCLIP) );
+			gi.trace( &trace, NPCInfo->investigateGoal, NPC->mins, NPC->maxs, end, ENTITYNUM_NONE, ((NPC->clipmask&~CONTENTS_BODY)|CONTENTS_BOTCLIP), G2_NOCOLLIDE, 0 );
 			if ( trace.fraction >= 1.0f )
 			{//too high to even bother
 				//FIXME: look at them???
@@ -1185,7 +1185,7 @@ static void ST_CheckMoveState( void )
 {
 	if ( Q3_TaskIDPending( NPC, TID_MOVE_NAV ) )
 	{//moving toward a goal that a script is waiting on, so don't stop for anything!
-		move = qtrue;
+		::move = qtrue;
 	}
 	//See if we're a scout
 	else if ( NPCInfo->squadState == SQUAD_SCOUT )
@@ -1193,7 +1193,7 @@ static void ST_CheckMoveState( void )
 		//If we're supposed to stay put, then stand there and fire
 		if ( TIMER_Done( NPC, "stick" ) == qfalse )
 		{
-			move = qfalse;
+			::move = qfalse;
 			return;
 		}
 
@@ -1206,7 +1206,7 @@ static void ST_CheckMoveState( void )
 				if ( NPCInfo->goalEntity == NPC->enemy )
 				{
 					AI_GroupUpdateSquadstates( NPCInfo->group, NPC, SQUAD_STAND_AND_SHOOT );
-					move = qfalse;
+					::move = qfalse;
 					return;
 				}
 			}
@@ -1259,20 +1259,20 @@ static void ST_CheckMoveState( void )
 			return;
 		}
 
-		move = qfalse;
+		::move = qfalse;
 		return;
 	}
 	//see if we're just standing around
 	else if ( NPCInfo->squadState == SQUAD_STAND_AND_SHOOT )
 	{//from this squadState we can transition to others?
-		move = qfalse;
+		::move = qfalse;
 		return;
 	}
 	//see if we're hiding
 	else if ( NPCInfo->squadState == SQUAD_COVER )
 	{
 		//Should we duck?
-		move = qfalse;
+		::move = qfalse;
 		return;
 	}
 	//see if we're just standing around
@@ -1280,7 +1280,7 @@ static void ST_CheckMoveState( void )
 	{
 		if ( !NPCInfo->goalEntity )
 		{
-			move = qfalse;
+			::move = qfalse;
 			return;
 		}
 	}
@@ -1423,7 +1423,7 @@ static void ST_CheckFireState( void )
 					vec3_t	forward, end;
 					AngleVectors( NPC->client->ps.viewangles, forward, NULL, NULL );
 					VectorMA( muzzle, 8192, forward, end );
-					gi.trace( &tr, muzzle, vec3_origin, vec3_origin, end, NPC->s.number, MASK_SHOT );
+					gi.trace( &tr, muzzle, vec3_origin, vec3_origin, end, NPC->s.number, MASK_SHOT, G2_NOCOLLIDE, 0 );
 					VectorCopy( tr.endpos, impactPos );
 				}
 
@@ -2451,7 +2451,7 @@ void NPC_BSST_Attack( void )
 	}
 
 	enemyLOS = enemyCS = enemyInFOV = qfalse;
-	move = qtrue;
+	::move = qtrue;
 	faceEnemy = qfalse;
 	shoot = qfalse;
 	hitAlly = qfalse;
@@ -2584,28 +2584,28 @@ void NPC_BSST_Attack( void )
 	{//not supposed to chase my enemies
 		if ( NPCInfo->goalEntity == NPC->enemy )
 		{//goal is my entity, so don't move
-			move = qfalse;
+			::move = qfalse;
 		}
 	}
 
 	if ( NPC->client->fireDelay && NPC->s.weapon == WP_ROCKET_LAUNCHER )
 	{
-		move = qfalse;
+		::move = qfalse;
 	}
 
-	if ( move )
+	if ( ::move )
 	{//move toward goal
 		if ( NPCInfo->goalEntity )//&& ( NPCInfo->goalEntity != NPC->enemy || enemyDist > 10000 ) )//100 squared
 		{
-			move = ST_Move();
+			::move = ST_Move();
 		}
 		else
 		{
-			move = qfalse;
+			::move = qfalse;
 		}
 	}
 
-	if ( !move )
+	if ( !::move )
 	{
 		if ( !TIMER_Done( NPC, "duck" ) )
 		{
@@ -2627,14 +2627,14 @@ void NPC_BSST_Attack( void )
 
 	if ( !faceEnemy )
 	{//we want to face in the dir we're running
-		if ( !move )
+		if ( !::move )
 		{//if we haven't moved, we should look in the direction we last looked?
 			VectorCopy( NPC->client->ps.viewangles, NPCInfo->lastPathAngles );
 		}
 		NPCInfo->desiredYaw = NPCInfo->lastPathAngles[YAW];
 		NPCInfo->desiredPitch = 0;
 		NPC_UpdateAngles( qtrue, qtrue );
-		if ( move )
+		if ( ::move )
 		{//don't run away and shoot
 			shoot = qfalse;
 		}
@@ -2678,7 +2678,7 @@ void NPC_BSST_Attack( void )
 			//NASTY
 			if ( NPC->s.weapon == WP_ROCKET_LAUNCHER 
 				&& (ucmd.buttons&BUTTON_ATTACK) 
-				&& !move
+				&& !::move
 				&& g_spskill->integer > 1 
 				&& !Q_irand( 0, 3 ) )
 			{//every now and then, shoot a homing rocket

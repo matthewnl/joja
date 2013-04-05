@@ -317,8 +317,10 @@ qboolean G_InitRoff( char *file, unsigned char *data )
 
 			roffs[num_roffs].type = 2; //rww - any reason this wasn't being set already?
 
+            int i;
+
 			// Copy all of the goods into our ROFF cache
-			for ( int i = 0; i < count; i++ )
+			for ( i = 0; i < count; i++ )
 			{
 				VectorCopy( roff_data[i].origin_delta, mem[i].origin_delta );
 				VectorCopy( roff_data[i].rotate_delta, mem[i].rotate_delta );
@@ -609,13 +611,13 @@ void G_LoadCachedRoffs()
 	char	buffer[MAX_QPATH];
 
 	// Get the count of goodies we need to revive
-	gi.ReadFromSaveGame( 'ROFF', (void *)&count, sizeof(count) );
+	gi.ReadFromSaveGame( 'ROFF', (void *)&count, sizeof(count), NULL );
 
 	// Now bring 'em back to life
 	for ( i = 0; i < count; i++ )
 	{
-		gi.ReadFromSaveGame( 'SLEN', (void *)&len, sizeof(len) );
-		gi.ReadFromSaveGame( 'RSTR', (void *)(buffer), len );
+		gi.ReadFromSaveGame( 'SLEN', (void *)&len, sizeof(len), NULL );
+		gi.ReadFromSaveGame( 'RSTR', (void *)(buffer), len, NULL );
 		G_LoadRoff( buffer );
 	}
 }

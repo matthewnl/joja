@@ -2,11 +2,15 @@
 # Visual Studio
 #
 
-*.aps
 [Dd]ebug/
+FinalBuild/
+ipch/
 [Rr]elease/
+
+*.aps
 *.idb
 *.ilk
+*.ipch
 *.map
 *.opt
 *.plg
