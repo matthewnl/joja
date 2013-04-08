@@ -11,9 +11,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\game\bg_lib.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\game\bg_misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -202,12 +199,5 @@
     <ClInclude Include="..\ui\ui_shared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="JK2_cgame.def">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="cgame.bat" />
-    <CustomBuild Include="cgame.q3asm" />
   </ItemGroup>
 </Project>

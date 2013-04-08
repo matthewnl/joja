@@ -11,21 +11,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
     <ProjectGuid>{CB7FC30B-F481-4F02-768F-43CD8815D75D}</ProjectGuid>
     <ProjectName>engine_jo_mp</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <PlatformToolset>v110_xp</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <PlatformToolset>v110_xp</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -45,32 +39,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile />
-    <Midl>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Debug\jk2mp.tlb</TypeLibraryName>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <TargetEnvironment>Win32</TargetEnvironment>
-    </Midl>
-    <ResourceCompile />
-    <Bscmake />
-    <Link />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile />
-    <Midl>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Release\jk2mp.tlb</TypeLibraryName>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <TargetEnvironment>Win32</TargetEnvironment>
-    </Midl>
-    <ResourceCompile />
-    <Bscmake />
-    <Link />
-  </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="game\anims.h" />
     <ClInclude Include="game\bg_weapons.h" />
@@ -182,58 +150,9 @@
     <ClInclude Include="encryption\cpp_interface.h" />
     <ClInclude Include="encryption\encryption.h" />
     <ClInclude Include="encryption\sockets.h" />
-    <ClInclude Include="smartheap\HEAPAGNT.H">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="smartheap\SMRTHEAP.H">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="smartheap\smrtheap.hpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="EaxMan.dll">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="OpenAL32.dll">
-      <FileType>Document</FileType>
-    </CustomBuild>
     <CustomBuild Include="win32\qe3.ico" />
-    <CustomBuild Include="smartheap\HA312W32.DLL">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="smartheap\SHW32.DLL">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="Debug\HA312W32.DLL">
-      <FileType>Document</FileType>
-    </CustomBuild>
-    <CustomBuild Include="Debug\SHW32.DLL">
-      <FileType>Document</FileType>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="win32\winquake.rc">
-      <Culture Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">0x0409</Culture>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="OpenAL32.lib" />
-    <Library Include="ALut.lib" />
-    <Library Include="smartheap\HAW32M.LIB">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </Library>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="botlib\be_aas_bspq3.cpp" />
@@ -264,13 +183,7 @@
     <ClCompile Include="botlib\l_precomp.cpp" />
     <ClCompile Include="botlib\l_script.cpp" />
     <ClCompile Include="botlib\l_struct.cpp" />
-    <ClCompile Include="client\0_SH_Leak.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="client\cl_cgame.cpp">
-      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OnlyExplicitInline</InlineFunctionExpansion>
-    </ClCompile>
+    <ClCompile Include="client\cl_cgame.cpp" />
     <ClCompile Include="client\cl_cin.cpp" />
     <ClCompile Include="client\cl_console.cpp" />
     <ClCompile Include="client\cl_input.cpp" />
@@ -302,15 +215,7 @@
     <ClCompile Include="qcommon\md4.cpp" />
     <ClCompile Include="qcommon\msg.cpp" />
     <ClCompile Include="qcommon\net_chan.cpp" />
-    <ClCompile Include="game\q_math.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="qcommon\q_math.cpp" />
-    <ClCompile Include="game\q_shared.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="qcommon\q_shared.cpp" />
     <ClCompile Include="qcommon\RoffSystem.cpp" />
     <ClCompile Include="qcommon\strip.cpp" />
@@ -446,10 +351,9 @@
     <ClCompile Include="encryption\buffer.cpp" />
     <ClCompile Include="encryption\cpp_interface.cpp" />
     <ClCompile Include="encryption\sockets.cpp" />
-    <ClCompile Include="smartheap\SMRTHEAP.C">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\winquake.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

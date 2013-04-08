@@ -11,13 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <SccProjectName>
-    </SccProjectName>
-    <SccAuxPath />
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccProvider>
-    </SccProvider>
     <ProjectGuid>{B54CDE7A-09E0-F73D-C215-F43ED48AE206}</ProjectGuid>
     <ProjectName>engine_ja_ded</ProjectName>
   </PropertyGroup>
@@ -47,26 +40,6 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-    <Midl>
-      <TypeLibraryName>.\Release/WinDed.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-    <Midl>
-      <TypeLibraryName>.\Debug/WinDed.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="qcommon\GenericParser2.h" />
     <ClInclude Include="qcommon\MiniHeap.h" />

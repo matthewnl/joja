@@ -9,8 +9,8 @@
       <UniqueIdentifier>{28a05247-b4a7-4ba5-aff8-f5700fea36a7}</UniqueIdentifier>
       <Extensions>h</Extensions>
     </Filter>
-    <Filter Include="win32">
-      <UniqueIdentifier>{36f015c3-10e0-4858-9d65-72bcbd035c4d}</UniqueIdentifier>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{607fd997-1314-4d36-8ff0-053704002261}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,9 +27,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\game\bg_g2_utils.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\game\bg_lib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\game\bg_misc.c">
@@ -243,12 +240,10 @@
     <None Include="JK2_cgame.def">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="cgame.bat" />
-    <None Include="cgame.q3asm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\win32\JK2cgame.rc">
-      <Filter>win32</Filter>
+      <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

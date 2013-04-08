@@ -40,34 +40,6 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 6
-		SccProjectUniqueName0 = cgame\\JK2_cgame.vcproj
-		SccProjectName0 = \u0022$/jedi/codemp/cgame\u0022,\u0020ICAAAAAA
-		SccLocalPath0 = cgame
-		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
-		SccProjectUniqueName1 = game\\JK2_game.vcproj
-		SccProjectName1 = \u0022$/jedi/codemp/game\u0022,\u0020EGAAAAAA
-		SccLocalPath1 = game
-		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		SccProjectUniqueName2 = WinDed.vcproj
-		SccProjectName2 = \u0022$/jedi/codemp\u0022,\u0020CAAAAAAA
-		SccLocalPath2 = .
-		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		SccProjectUniqueName3 = botlib\\botlib.vcproj
-		SccProjectName3 = \u0022$/jedi/codemp/botlib\u0022,\u0020EAAAAAAA
-		SccLocalPath3 = botlib
-		SccProvider3 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		SccProjectUniqueName4 = jk2mp.vcproj
-		SccProjectName4 = \u0022$/jedi/codemp\u0022,\u0020CAAAAAAA
-		SccLocalPath4 = .
-		SccProvider4 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		SccProjectUniqueName5 = ui\\ui.vcproj
-		SccProjectName5 = \u0022$/jedi/codemp/ui\u0022,\u0020YSAAAAAA
-		SccLocalPath5 = ui
-		SccProvider5 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-	EndGlobalSection
 	GlobalSection(DevPartner) = postSolution
 	EndGlobalSection
 EndGlobal

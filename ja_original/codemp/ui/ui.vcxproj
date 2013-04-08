@@ -11,13 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <SccProjectName>
-    </SccProjectName>
-    <SccAuxPath />
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccProvider>
-    </SccProvider>
     <ProjectGuid>{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}</ProjectGuid>
     <ProjectName>ui_ja_mp</ProjectName>
   </PropertyGroup>
@@ -49,41 +42,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <ProgramDatabaseFile>
-      </ProgramDatabaseFile>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Release/ui.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Debug/ui.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\game\bg_lib.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="..\game\bg_misc.c" />
     <ClCompile Include="..\game\bg_saga.c" />
     <ClCompile Include="..\game\bg_vehicleLoad.c" />
@@ -121,8 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ui.def" />
-    <None Include="ui.bat" />
-    <None Include="ui.q3asm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\win32\ui.rc" />

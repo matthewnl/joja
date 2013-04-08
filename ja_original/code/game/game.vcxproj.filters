@@ -171,9 +171,6 @@
     <ClCompile Include="NPC_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\smartheap\SMRTHEAP.C">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="g_active.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -381,9 +378,6 @@
     <ClCompile Include="..\cgame\FxUtil.cpp">
       <Filter>Cgame</Filter>
     </ClCompile>
-    <ClCompile Include="bg_lib.cpp">
-      <Filter>Cgame</Filter>
-    </ClCompile>
     <ClCompile Include="bg_misc.cpp">
       <Filter>Cgame</Filter>
     </ClCompile>
@@ -507,11 +501,6 @@
     <ClCompile Include="g_vehicles.c">
       <Filter>Vehicles</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\win32\game.rc">
-      <Filter>Source Files</Filter>
-    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AI.h">
@@ -801,13 +790,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="game.def">
+    <ResourceCompile Include="..\win32\game.rc">
       <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuildStep Include="..\smartheap\HAW32M.LIB">
-      <Filter>Resource Files</Filter>
-    </CustomBuildStep>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

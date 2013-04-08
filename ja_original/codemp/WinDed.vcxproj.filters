@@ -41,8 +41,8 @@
       <UniqueIdentifier>{2d498d09-e79e-43c5-965a-992eaf81f4fd}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{bd2e00bf-ca51-464c-b614-151c64373190}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+      <UniqueIdentifier>{94c7191e-5bff-4c6a-a1ed-69137e31869f}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -759,7 +759,7 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\WinDed.rc">
-      <Filter>Win32</Filter>
+      <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -60,9 +60,6 @@
     <Filter Include="zlib32">
       <UniqueIdentifier>{cc2d820f-8cee-407c-9fc7-db65e3f9c6d5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SmartHeap">
-      <UniqueIdentifier>{beafd4c5-3e2a-4d95-b9f7-779b5d843f01}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Debug">
       <UniqueIdentifier>{cf610896-a41e-4dca-8b45-e383c233f7f9}</UniqueIdentifier>
     </Filter>
@@ -487,20 +484,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="ALut.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="OpenAL32.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="EaxMan.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="OpenAL32.dll">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="win32\qe3.ico">
       <Filter>Resource Files</Filter>
     </None>
@@ -511,9 +494,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="client\0_SH_Leak.cpp">
-      <Filter>Client</Filter>
-    </ClCompile>
     <ClCompile Include="client\FXExport.cpp">
       <Filter>Client</Filter>
     </ClCompile>
@@ -637,13 +617,7 @@
     <ClCompile Include="qcommon\net_chan.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="game\q_math.c">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="qcommon\q_math.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="game\q_shared.c">
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="qcommon\q_shared.cpp">
@@ -1036,9 +1010,6 @@
     <ClCompile Include="zlib32\zipcommon.cpp">
       <Filter>zlib32</Filter>
     </ClCompile>
-    <ClCompile Include="smartheap\SMRTHEAP.C">
-      <Filter>SmartHeap</Filter>
-    </ClCompile>
     <ClCompile Include="RMG\RM_Area.cpp">
       <Filter>RMG</Filter>
     </ClCompile>
@@ -1189,31 +1160,5 @@
     <ClCompile Include="botlib\l_struct.cpp">
       <Filter>botlib</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuildStep Include="smartheap\HA312W32.DLL">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="smartheap\HAW32M.LIB">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="smartheap\HEAPAGNT.H">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="smartheap\SHW32.DLL">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="smartheap\SMRTHEAP.H">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="smartheap\smrtheap.hpp">
-      <Filter>SmartHeap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="Debug\HA312W32.DLL">
-      <Filter>Debug</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="Debug\SHW32.DLL">
-      <Filter>Debug</Filter>
-    </CustomBuildStep>
   </ItemGroup>
 </Project>

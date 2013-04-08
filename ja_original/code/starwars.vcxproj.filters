@@ -5,17 +5,11 @@
       <UniqueIdentifier>{763ae4c4-c41a-4d0e-acaf-09aad65c0219}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
     </Filter>
-    <Filter Include="Source Files\0_compiled_first">
-      <UniqueIdentifier>{04a84473-affd-403f-8303-9dfd23f33f5b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\EAX">
       <UniqueIdentifier>{4ed4fed2-8c38-41a0-aa6e-c0018e36ced1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\OpenAL">
       <UniqueIdentifier>{eb339b2f-13b8-4ad3-854e-2d9cbbecc535}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\smartheap">
-      <UniqueIdentifier>{42c9555a-29ab-4e2a-b444-92390ce3eea4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{ac63f6ef-bdc2-4778-ade1-34945b5d8256}</UniqueIdentifier>
@@ -30,15 +24,6 @@
     </Filter>
     <Filter Include="MP3 Source\MP3 Headers">
       <UniqueIdentifier>{4068cf41-5ef5-4764-b7c9-2c9f8fdd943b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ForceFeedback Source">
-      <UniqueIdentifier>{5b7aec87-307c-4cab-b07f-bcd4631600c8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ForceFeedback Source\ForceFeedback Headers">
-      <UniqueIdentifier>{3c2fc988-c7b0-4fd0-bf1a-da8e8c4eb37c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ForceFeedback Source\ForceFeedback Binaries">
-      <UniqueIdentifier>{7e60d500-ea3a-432d-8969-c17c5492d231}</UniqueIdentifier>
     </Filter>
     <Filter Include="Renderer Source">
       <UniqueIdentifier>{508a3920-8570-436d-9b76-273702ff5afc}</UniqueIdentifier>
@@ -61,10 +46,6 @@
     </Filter>
     <Filter Include="FF %28Immersion%29\IFC">
       <UniqueIdentifier>{226df8ac-6f54-4d39-8bc3-b9371cf9c5ec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="FF %28Immersion%29\FF Binaries">
-      <UniqueIdentifier>{9775a6a7-e5fb-4e59-b59c-d9641bdffa7d}</UniqueIdentifier>
-      <Extensions>*.dll</Extensions>
     </Filter>
     <Filter Include="RMG">
       <UniqueIdentifier>{1fd24834-9d03-40d0-a0ed-8c56f972443b}</UniqueIdentifier>
@@ -147,9 +128,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="qcommon\cvar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="server\exe_headers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="qcommon\files_common.cpp">
@@ -251,12 +229,6 @@
     <ClCompile Include="qcommon\z_memman_pc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="0_compiled_first\0_SH_Leak.cpp">
-      <Filter>Source Files\0_compiled_first</Filter>
-    </ClCompile>
-    <ClCompile Include="smartheap\SMRTHEAP.C">
-      <Filter>Source Files\smartheap</Filter>
-    </ClCompile>
     <ClCompile Include="mp3code\cdct.c">
       <Filter>MP3 Source</Filter>
     </ClCompile>
@@ -319,12 +291,6 @@
     </ClCompile>
     <ClCompile Include="mp3code\wavep.c">
       <Filter>MP3 Source</Filter>
-    </ClCompile>
-    <ClCompile Include="win32\FeelIt\fffx.cpp">
-      <Filter>ForceFeedback Source</Filter>
-    </ClCompile>
-    <ClCompile Include="win32\FeelIt\fffx_feel.cpp">
-      <Filter>ForceFeedback Source</Filter>
     </ClCompile>
     <ClCompile Include="renderer\MatComp.c">
       <Filter>Renderer Source</Filter>
@@ -679,15 +645,6 @@
     <ClInclude Include="client\OpenAL\alut.h">
       <Filter>Source Files\OpenAL</Filter>
     </ClInclude>
-    <ClInclude Include="smartheap\HEAPAGNT.H">
-      <Filter>Source Files\smartheap</Filter>
-    </ClInclude>
-    <ClInclude Include="smartheap\SMRTHEAP.H">
-      <Filter>Source Files\smartheap</Filter>
-    </ClInclude>
-    <ClInclude Include="smartheap\smrtheap.hpp">
-      <Filter>Source Files\smartheap</Filter>
-    </ClInclude>
     <ClInclude Include="game\anims.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -870,81 +827,6 @@
     </ClInclude>
     <ClInclude Include="mp3code\tableawd.h">
       <Filter>MP3 Source\MP3 Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FEELitIFR.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FFC.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FFCErrors.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelBaseTypes.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelBox.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelCompoundEffect.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelCondition.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelConstant.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelDXDevice.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelDamper.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelDevice.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelEffect.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelEllipse.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelEnclosure.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelFriction.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelGrid.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelInertia.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelMouse.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelPeriodic.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelProjects.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelRamp.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelSpring.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelTexture.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\FeelitAPI.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="win32\FeelIt\fffx_feel.h">
-      <Filter>ForceFeedback Source\ForceFeedback Headers</Filter>
     </ClInclude>
     <ClInclude Include="renderer\glext.h">
       <Filter>Renderer Source\Renderer Headers</Filter>
@@ -1245,62 +1127,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SHDebug\HA312W32.DLL">
-      <Filter>Source Files\smartheap</Filter>
-    </None>
-    <None Include="SHDebug\SHW32.DLL">
-      <Filter>Source Files\smartheap</Filter>
-    </None>
-    <None Include="EaxMan.dll">
+    <Image Include="win32\starwars.ico">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="OpenAL32.dll">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="win32\background.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="win32\clear.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="win32\starwars.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="win32\FeelIt\FFC10.dll">
-      <Filter>ForceFeedback Source\ForceFeedback Binaries</Filter>
-    </None>
-    <None Include="win32\FeelIt\FFC10d.dll">
-      <Filter>ForceFeedback Source\ForceFeedback Binaries</Filter>
-    </None>
-    <None Include="IFC22.dll">
-      <Filter>FF %28Immersion%29\FF Binaries</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="ALut.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="OpenAL32.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="ff\IFC\IFC22.lib">
-      <Filter>FF %28Immersion%29\FF Binaries</Filter>
-    </Library>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32\winquake.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuildStep Include="smartheap\HAW32M.LIB">
-      <Filter>Source Files\smartheap</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="win32\FeelIt\FFC10.lib">
-      <Filter>ForceFeedback Source\ForceFeedback Binaries</Filter>
-    </CustomBuildStep>
-    <CustomBuildStep Include="win32\FeelIt\FFC10d.lib">
-      <Filter>ForceFeedback Source\ForceFeedback Binaries</Filter>
-    </CustomBuildStep>
   </ItemGroup>
 </Project>

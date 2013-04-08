@@ -404,36 +404,8 @@
     <ClInclude Include="encryption\sockets.h">
       <Filter>encryption</Filter>
     </ClInclude>
-    <ClInclude Include="smartheap\HEAPAGNT.H">
-      <Filter>SmartHeap</Filter>
-    </ClInclude>
-    <ClInclude Include="smartheap\SMRTHEAP.H">
-      <Filter>SmartHeap</Filter>
-    </ClInclude>
-    <ClInclude Include="smartheap\smrtheap.hpp">
-      <Filter>SmartHeap</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="win32\winquake.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="OpenAL32.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="ALut.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="smartheap\HAW32M.LIB">
-      <Filter>SmartHeap</Filter>
-    </Library>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="client\0_SH_Leak.cpp">
-      <Filter>Client</Filter>
-    </ClCompile>
     <ClCompile Include="client\cl_cgame.cpp">
       <Filter>Client</Filter>
     </ClCompile>
@@ -530,13 +502,7 @@
     <ClCompile Include="qcommon\net_chan.cpp">
       <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="game\q_math.c">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="qcommon\q_math.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="game\q_shared.c">
       <Filter>Common</Filter>
     </ClCompile>
     <ClCompile Include="qcommon\q_shared.cpp">
@@ -944,9 +910,6 @@
     <ClCompile Include="encryption\sockets.cpp">
       <Filter>encryption</Filter>
     </ClCompile>
-    <ClCompile Include="smartheap\SMRTHEAP.C">
-      <Filter>SmartHeap</Filter>
-    </ClCompile>
     <ClCompile Include="botlib\be_aas_bspq3.cpp">
       <Filter>botlib</Filter>
     </ClCompile>
@@ -1033,26 +996,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="EaxMan.dll">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="OpenAL32.dll">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="win32\qe3.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="smartheap\HA312W32.DLL">
-      <Filter>SmartHeap</Filter>
-    </CustomBuild>
-    <CustomBuild Include="smartheap\SHW32.DLL">
-      <Filter>SmartHeap</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Debug\HA312W32.DLL">
-      <Filter>Debug</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Debug\SHW32.DLL">
-      <Filter>Debug</Filter>
-    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\winquake.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

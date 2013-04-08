@@ -11,13 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <SccProjectName>
-    </SccProjectName>
-    <SccAuxPath />
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccProvider>
-    </SccProvider>
     <ProjectGuid>{5640C591-0205-2AEC-4B05-5F49FC807CFC}</ProjectGuid>
     <ProjectName>game_ja_sp</ProjectName>
   </PropertyGroup>
@@ -49,36 +42,6 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\..\Debug/game.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <ProgramDatabaseFile>
-      </ProgramDatabaseFile>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\..\Release/game.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AI_Animal.cpp" />
     <ClCompile Include="AI_AssassinDroid.cpp" />
@@ -123,10 +86,6 @@
     <ClCompile Include="NPC_spawn.cpp" />
     <ClCompile Include="NPC_stats.cpp" />
     <ClCompile Include="NPC_utils.cpp" />
-    <ClCompile Include="..\smartheap\SMRTHEAP.C">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="g_active.cpp" />
     <ClCompile Include="g_breakable.cpp" />
     <ClCompile Include="g_camera.cpp" />
@@ -196,10 +155,6 @@
     <ClCompile Include="..\cgame\FxSystem.cpp" />
     <ClCompile Include="..\cgame\FxTemplate.cpp" />
     <ClCompile Include="..\cgame\FxUtil.cpp" />
-    <ClCompile Include="bg_lib.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="bg_misc.cpp" />
     <ClCompile Include="bg_pangles.cpp" />
     <ClCompile Include="bg_panimate.cpp" />
@@ -259,9 +214,6 @@
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\win32\game.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AI.h" />
@@ -361,14 +313,7 @@
     <ClInclude Include="g_vehicles.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuildStep Include="..\smartheap\HAW32M.LIB">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuildStep>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="game.def" />
+    <ResourceCompile Include="..\win32\game.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

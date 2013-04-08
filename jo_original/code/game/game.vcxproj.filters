@@ -46,9 +46,6 @@
     <ClCompile Include="..\Icarus\TaskManager.cpp">
       <Filter>Source Files\ICARUS</Filter>
     </ClCompile>
-    <ClCompile Include="bg_lib.cpp">
-      <Filter>Source Files\Cgame</Filter>
-    </ClCompile>
     <ClCompile Include="bg_misc.cpp">
       <Filter>Source Files\Cgame</Filter>
     </ClCompile>
@@ -86,9 +83,6 @@
       <Filter>Source Files\Cgame</Filter>
     </ClCompile>
     <ClCompile Include="..\cgame\cg_event.cpp">
-      <Filter>Source Files\Cgame</Filter>
-    </ClCompile>
-    <ClCompile Include="..\cgame\cg_headers.cpp">
       <Filter>Source Files\Cgame</Filter>
     </ClCompile>
     <ClCompile Include="..\cgame\cg_info.cpp">
@@ -262,9 +256,6 @@
     <ClCompile Include="g_fx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="g_headers.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="g_ICARUS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -404,9 +395,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="q_shared.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\smartheap\SMRTHEAP.C">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\qcommon\tri_coll_test.cpp">
@@ -630,16 +618,5 @@
     <ClInclude Include="wp_saber.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="..\smartheap\HAW32M.LIB" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="game.def">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\base\ext_data\items.dat" />
-    <CustomBuild Include="..\base\ext_data\NPCs.cfg" />
-    <CustomBuild Include="..\base\ext_data\weapons.dat" />
   </ItemGroup>
 </Project>

@@ -12,13 +12,6 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>game_ja_mp</ProjectName>
-    <SccProjectName>
-    </SccProjectName>
-    <SccAuxPath />
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccProvider>
-    </SccProvider>
     <ProjectGuid>{830B5A34-71EA-1514-3E04-B83D9389E0E6}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -49,36 +42,6 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <ProgramDatabaseFile>
-      </ProgramDatabaseFile>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Release/JK2_game.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile />
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Debug/JK2_game.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile />
-  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimalNPC.c" />
     <ClCompile Include="FighterNPC.c" />
@@ -120,10 +83,6 @@
     <ClCompile Include="ai_util.c" />
     <ClCompile Include="ai_wpnav.c" />
     <ClCompile Include="bg_g2_utils.c" />
-    <ClCompile Include="bg_lib.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="bg_misc.c" />
     <ClCompile Include="bg_panimate.c" />
     <ClCompile Include="bg_pmove.c" />
@@ -224,8 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="JK2_game.def" />
-    <None Include="game.bat" />
-    <None Include="game.q3asm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\win32\JK2game.rc" />
