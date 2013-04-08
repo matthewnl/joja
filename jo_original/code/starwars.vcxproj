@@ -12,6 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1B538F6C-BD58-F205-128D-51F4410A80B9}</ProjectGuid>
+    <ProjectName>engine_jo_sp</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -25,63 +26,29 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_core.props" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_debug.props" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_engine_jo_sp.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_core.props" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_release.props" />
+    <Import Project="..\..\prj\win32_vs2012\props\joja_engine_jo_sp.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-    <TargetName>jk2sp</TargetName>
-    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <TargetName>jk2sp</TargetName>
-    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <StringPooling>true</StringPooling>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <AdditionalIncludeDirectories>ff/ifc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;FINAL_BUILD;_JK2EXE;WIN32;_WINDOWS;_IMMERSION;_FF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ResourceCompile>
+    <ClCompile />
+    <ResourceCompile />
     <Bscmake />
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>alut.lib;openal32.lib;winmm.lib;ws2_32.lib;ff/ifc/ifc22.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <StackReserveSize>8388608</StackReserveSize>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-    </Link>
+    <Link />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <Optimization>Disabled</Optimization>
-      <WarningLevel>Level1</WarningLevel>
-      <AdditionalIncludeDirectories>ff/ifc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;_JK2EXE;WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_IMMERSION;_FF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <StringPooling>true</StringPooling>
-    </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ResourceCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>alut.lib;openal32.lib;winmm.lib;ws2_32.lib;ff/ifc/ifc22.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <StackReserveSize>8388608</StackReserveSize>
-    </Link>
+    <ClCompile />
+    <ResourceCompile />
+    <Link />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="0_compiled_first\0_SH_Leak.cpp">
