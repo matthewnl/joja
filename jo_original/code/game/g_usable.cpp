@@ -4,6 +4,7 @@
 
 #include "g_local.h"
 #include "g_functions.h"
+#include "../cgame/cg_local.h"
 
 extern void	InitMover( gentity_t *ent );
 

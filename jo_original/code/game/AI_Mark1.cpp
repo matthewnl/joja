@@ -2,6 +2,8 @@
 #include "g_headers.h"
 #include "b_local.h"
 #include "g_nav.h"
+#include "g_functions.h"
+#include "../cgame/cg_local.h"
 
 #define	MIN_MELEE_RANGE				320
 #define	MIN_MELEE_RANGE_SQR			( MIN_MELEE_RANGE * MIN_MELEE_RANGE )
@@ -316,7 +318,7 @@ void NPC_Mark1_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, ve
 {
 	int newBolt,i,chance;
 	
-	NPC_Pain( self, inflictor, other, point, damage, mod );
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE );
 
 	G_Sound( self, G_SoundIndex("sound/chars/mark1/misc/mark1_pain"));
 

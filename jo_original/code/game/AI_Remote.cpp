@@ -38,7 +38,7 @@ void NPC_Remote_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, v
 	Remote_Strafe();
 	RestoreNPCGlobals();
 
-	NPC_Pain( self, inflictor, other, point, damage, mod );
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE );
 }
 
 /*

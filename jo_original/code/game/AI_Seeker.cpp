@@ -4,6 +4,7 @@
 
 #include "b_local.h"
 #include "g_nav.h"
+#include "../cgame/cg_camera.h"
 
 gentity_t *CreateMissile( vec3_t org, vec3_t dir, float vel, int life, gentity_t *owner, qboolean altFire = qfalse );
 
@@ -46,7 +47,7 @@ void NPC_Seeker_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, v
 	SetNPCGlobals( self );
 	Seeker_Strafe();
 	RestoreNPCGlobals();
-	NPC_Pain( self, inflictor, other, point, damage, mod );
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE );
 }
 
 //------------------------------------

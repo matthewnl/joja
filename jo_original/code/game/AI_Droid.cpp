@@ -374,7 +374,7 @@ void NPC_Droid_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, ve
 		self->client->ps.velocity[2] -= 127;
 	}
 
-	NPC_Pain( self, inflictor, other, point, damage, mod);
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE);
 }
 
 

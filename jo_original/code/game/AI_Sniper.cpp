@@ -97,7 +97,7 @@ void NPC_Sniper_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, v
 	TIMER_Set( self, "duck", -1 );
 	TIMER_Set( self, "stand", 2000 );
 
-	NPC_Pain( self, inflictor, other, point, damage, mod );
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE );
 
 	if ( !damage && self->health > 0 )
 	{//FIXME: better way to know I was pushed

@@ -4525,7 +4525,7 @@ void NPC_Jedi_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, vec
 
 	WP_ForcePowerStop( self, FP_GRIP );
 
-	NPC_Pain( self, inflictor, other, point, damage, mod );
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE );
 
 	if ( !damage && self->health > 0 )
 	{//FIXME: better way to know I was pushed

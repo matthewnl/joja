@@ -14,6 +14,7 @@
 #include "Q3_Interface.h"
 #include "g_local.h"
 #include "wp_saber.h"
+#include "b_local.h"
 
 extern pmove_t	*pm;
 extern pml_t	pml;

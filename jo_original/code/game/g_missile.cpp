@@ -6,6 +6,7 @@
 #include "g_functions.h"
 #include "wp_saber.h"
 #include "bg_local.h"			   
+#include "b_local.h"
 
 extern qboolean InFront( vec3_t spot, vec3_t from, vec3_t fromAngles, float threshHold = 0.0f );
 qboolean LogAccuracyHit( gentity_t *target, gentity_t *attacker );

@@ -4,7 +4,10 @@
 
 // this include must remain at the top of every Icarus CPP file
 #include "icarus.h"
-#include "g_headers.h"
+//#include "g_headers.h"
+#include "../game/q_shared.h"
+#include "../cgame/cg_local.h"
+#include "../game/g_shared.h"
 
 #include "assert.h"
 

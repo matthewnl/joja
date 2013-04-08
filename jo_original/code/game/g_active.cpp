@@ -8,6 +8,7 @@
 #include "Q3_Interface.h"
 #include "wp_saber.h"
 #include "g_icarus.h"
+#include "b_local.h"
 
 #ifdef _DEBUG
 	#include <float.h>

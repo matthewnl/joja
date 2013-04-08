@@ -17,6 +17,7 @@
 #include "../cgame/cg_local.h"	// yeah I know this is naughty, but we're shipping soon...
 #include "wp_saber.h"
 #include <float.h>
+#include "b_local.h"
 
 extern qboolean G_DoDismemberment( gentity_t *self, vec3_t point, int mod, int damage, int hitLoc, qboolean force = qfalse );
 extern qboolean G_EntIsUnlockedDoor( int entityNum );

@@ -9,6 +9,7 @@
 
 
 #include <assert.h>
+#include "../game/g_local.h"
 
 #define ICARUS_VALIDATE(a) if ( a == false ) return TASK_FAILED;
 

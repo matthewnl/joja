@@ -4,6 +4,7 @@
 
 #include "b_local.h"
 #include "g_nav.h"
+#include "../cgame/cg_local.h"
 
 gentity_t *CreateMissile( vec3_t org, vec3_t dir, float vel, int life, gentity_t *owner, qboolean altFire = qfalse );
 extern gitem_t	*FindItemForAmmo( ammo_t ammo );
@@ -484,7 +485,7 @@ void NPC_Probe_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, ve
 		}	
 	}
 
-	NPC_Pain( self, inflictor, other, point, damage, mod);
+	NPC_Pain( self, inflictor, other, point, damage, mod, HL_NONE);
 }
 
 /*

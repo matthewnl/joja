@@ -3,6 +3,9 @@
 #ifndef __INTERFACE__
 #define __INTERFACE__
 
+#include "../game/q_shared.h"
+#include "../game/bg_public.h"
+
 typedef unsigned long       DWORD;
 
 typedef	float	vec_t;

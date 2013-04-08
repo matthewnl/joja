@@ -587,7 +587,7 @@ void _FF_PlayFXSlot(int iSlotNum)
 
 
 
-void FF_StopAll(void)
+qboolean FF_StopAll(void)
 {
 	if (FF_IsAvailable())
 	{
@@ -599,6 +599,8 @@ void FF_StopAll(void)
 			}
 		}
 	}
+
+    return qtrue;
 }
 
 

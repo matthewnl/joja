@@ -104,7 +104,7 @@ qboolean	FF_SetSpring(long lSpring);		// precision version of above, 0..n..10000
 void FF_Play			(ffFX_e fffx);
 void FF_EnsurePlaying	(ffFX_e fffx);
 void FF_Stop			(ffFX_e fffx);
-void FF_StopAll			(void);
+qboolean FF_StopAll			(void);
 
 #define MAX_CONCURRENT_FFFXs 4	// only for my code to use/read, do NOT alter!
 

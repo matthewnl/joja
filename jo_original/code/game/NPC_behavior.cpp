@@ -10,6 +10,9 @@ we need it...
 #include "g_headers.h"
 #include "g_navigator.h"
 #include "Q3_Interface.h"
+#include "b_local.h"
+#include "g_nav.h"
+#include "g_functions.h"
 
 extern cvar_t	*g_AIsurrender;
 extern CNavigator	navigator;
