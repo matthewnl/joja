@@ -3,6 +3,7 @@
 
 	    
 #include "b_local.h"
+#include "g_navigator.h"
 
 // These define the working combat range for these suckers
 #define MIN_DISTANCE		48
@@ -568,7 +569,7 @@ qboolean Wampa_CheckDropVictim( gentity_t *self, qboolean excludeMe )
 	{
 		gi.unlinkentity( self );
 	}
-	gi.trace( &trace, start, mins, maxs, end, self->activator->s.number, self->activator->clipmask );
+	gi.trace( &trace, start, mins, maxs, end, self->activator->s.number, self->activator->clipmask, G2_NOCOLLIDE, 0 );
 	if ( excludeMe )
 	{
 		gi.linkentity( self );

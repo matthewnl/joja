@@ -13,6 +13,7 @@
 	#include "..\Ratl\string_vs.h"
 	#include "..\Rufl\hstring.h"
 	#include "..\Ratl\vector_vs.h"
+#include "../cgame/cg_local.h"
 
 extern void WP_RemoveSaber( gentity_t *ent, int saberNum );
 extern qboolean NPCsPrecached;

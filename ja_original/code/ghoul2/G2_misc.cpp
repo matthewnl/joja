@@ -1119,7 +1119,9 @@ static bool G2_TracePolys(const mdxmSurface_t *surface, const mdxmSurfHierarchy_
 		// did we hit it?
 		if (G2_SegmentTriangleTest(TS.rayStart, TS.rayEnd, point1, point2, point3, qtrue, qtrue, hitPoint, normal, &face))
 		{	// find space in the collision records for this record
-			for (int i=0; i<MAX_G2_COLLISIONS;i++)
+            int i;
+
+			for (i=0; i<MAX_G2_COLLISIONS;i++)
 			{
 				if (TS.collRecMap[i].mEntityNum == -1)
 				{
@@ -1351,7 +1353,9 @@ static bool G2_RadiusTracePolys(
 		{
 			// we hit a triangle, so init a collision record...
 			//
-			for (int i=0; i<MAX_G2_COLLISIONS;i++)
+            int i;
+
+			for (i=0; i<MAX_G2_COLLISIONS;i++)
 			{
 				if (TS.collRecMap[i].mEntityNum == -1)
 				{
@@ -1791,7 +1795,7 @@ void G2_SaveGhoul2Models(CGhoul2Info_v &ghoul2)
 	*(int *)tempBuffer = ghoul2.size();
 	tempBuffer +=4;
 
-	for (i=0; i<ghoul2.size();i++)
+	for (int i=0; i<ghoul2.size();i++)
 	{
 		// first save out the ghoul2 details themselves
 //		OutputDebugString(va("G2_SaveGhoul2Models(): ghoul2[%d].mModelindex = %d\n",i,ghoul2[i].mModelindex));
@@ -1814,7 +1818,7 @@ void G2_SaveGhoul2Models(CGhoul2Info_v &ghoul2)
 		tempBuffer +=4;
 
 		// now save the all the bone list info
-		for (x=0; x<ghoul2[i].mBlist.size(); x++)
+		for (int x=0; x<ghoul2[i].mBlist.size(); x++)
 		{
 			memcpy(tempBuffer, &ghoul2[i].mBlist[x], BONE_SAVE_BLOCK_SIZE);
 			tempBuffer += BONE_SAVE_BLOCK_SIZE;
@@ -1825,7 +1829,7 @@ void G2_SaveGhoul2Models(CGhoul2Info_v &ghoul2)
 		tempBuffer +=4;
 
 		// lastly save the all the bolt list info
-		for (x=0; x<ghoul2[i].mBltlist.size(); x++)
+		for (int x=0; x<ghoul2[i].mBltlist.size(); x++)
 		{
 			memcpy(tempBuffer, &ghoul2[i].mBltlist[x], BOLT_SAVE_BLOCK_SIZE);
 			tempBuffer += BOLT_SAVE_BLOCK_SIZE;
@@ -1839,8 +1843,9 @@ void G2_SaveGhoul2Models(CGhoul2Info_v &ghoul2)
 int G2_FindConfigStringSpace(char *name, int start, int max)
 {
 	char	s[MAX_STRING_CHARS];
+    int i;
 
-	for (int  i=1 ; i<max ; i++ ) 
+	for (i=1 ; i<max ; i++ ) 
 	{
 		SV_GetConfigstring( start + i, s, sizeof( s ) );
 		if ( !s[0] ) 
@@ -1907,7 +1912,7 @@ void G2_LoadGhoul2Model(CGhoul2Info_v &ghoul2, char *buffer)
 		buffer +=4;
 
 		// now load all the bones
-		for (x=0; x<ghoul2[i].mBlist.size(); x++)
+		for (int x=0; x<ghoul2[i].mBlist.size(); x++)
 		{
 			memcpy(&ghoul2[i].mBlist[x], buffer, BONE_SAVE_BLOCK_SIZE);
 			buffer += BONE_SAVE_BLOCK_SIZE;
@@ -1918,7 +1923,7 @@ void G2_LoadGhoul2Model(CGhoul2Info_v &ghoul2, char *buffer)
 		buffer +=4;
 
 		// now load all the bolts
-		for (x=0; x<ghoul2[i].mBltlist.size(); x++)
+		for (int x=0; x<ghoul2[i].mBltlist.size(); x++)
 		{
 			memcpy(&ghoul2[i].mBltlist[x], buffer, BOLT_SAVE_BLOCK_SIZE);
 			buffer += BOLT_SAVE_BLOCK_SIZE;

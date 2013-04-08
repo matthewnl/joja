@@ -5,6 +5,9 @@
 #include "g_local.h"
 #include "g_roff.h"
 #include "Q3_Interface.h"
+#include "g_functions.h"
+#include "../cgame/cg_local.h"
+
 // The list of precached ROFFs
 roff_list_t	roffs[MAX_ROFFS];
 int			num_roffs = 0;
@@ -335,7 +338,9 @@ static qboolean G_InitRoff( char *file, unsigned char *data )
 			roffs[num_roffs].type = 2; //rww - any reason this wasn't being set already?
 
 			// Copy all of the goods into our ROFF cache
-			for ( int i = 0; i < count; i++ )
+            int i;
+
+			for ( i = 0; i < count; i++ )
 			{
 				VectorCopy( roff_data[i].origin_delta, mem[i].origin_delta );
 				VectorCopy( roff_data[i].rotate_delta, mem[i].rotate_delta );
@@ -634,13 +639,13 @@ void G_LoadCachedRoffs()
 	char	buffer[MAX_QPATH];
 
 	// Get the count of goodies we need to revive
-	gi.ReadFromSaveGame( 'ROFF', (void *)&count, sizeof(count) );
+	gi.ReadFromSaveGame( 'ROFF', (void *)&count, sizeof(count), NULL );
 
 	// Now bring 'em back to life
 	for ( i = 0; i < count; i++ )
 	{
-		gi.ReadFromSaveGame( 'SLEN', (void *)&len, sizeof(len) );
-		gi.ReadFromSaveGame( 'RSTR', (void *)(buffer), len );
+		gi.ReadFromSaveGame( 'SLEN', (void *)&len, sizeof(len), NULL );
+		gi.ReadFromSaveGame( 'RSTR', (void *)(buffer), len, NULL );
 		G_LoadRoff( buffer );
 	}
 }

@@ -37,7 +37,7 @@ void R2D2_PartsMove(void)
 
 		if (NPC->genericBone1)
 		{
-			gi.G2API_SetBoneAnglesIndex( &NPC->ghoul2[NPC->playerModel], NPC->genericBone1, NPC->pos1, BONE_ANGLES_POSTMULT, POSITIVE_X, NEGATIVE_Y, NEGATIVE_Z, NULL ); 
+			gi.G2API_SetBoneAnglesIndex( &NPC->ghoul2[NPC->playerModel], NPC->genericBone1, NPC->pos1, BONE_ANGLES_POSTMULT, POSITIVE_X, NEGATIVE_Y, NEGATIVE_Z, NULL, 0, 0 ); 
 		}
 		TIMER_Set( NPC, "eyeDelay", Q_irand( 100, 1000 ) );
 	}
@@ -377,7 +377,7 @@ void NPC_Droid_Pain( gentity_t *self, gentity_t *inflictor, gentity_t *other, co
 		self->client->ps.velocity[2] -= 127;
 	}
 
-	NPC_Pain( self, inflictor, other, point, damage, mod);
+	NPC_Pain( self, inflictor, other, const_cast<vec_t*> (point), damage, mod, HL_NONE);
 }
 
 

@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game", "game\game.vcxproj", "{5640C591-0205-2AEC-4B05-5F49FC807CFC}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exe", "starwars.vcxproj", "{CF024894-8CC7-98DC-6552-EDB51780D776}"
@@ -7,19 +7,17 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
-		FinalBuild|Win32 = FinalBuild|Win32
 		Release|Win32 = Release|Win32
-		SHDebug|Win32 = SHDebug|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.FinalBuild|Win32.ActiveCfg = FinalBuild|Win32
+		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.Debug|Win32.Build.0 = Debug|Win32
 		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.Release|Win32.ActiveCfg = Release|Win32
-		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.SHDebug|Win32.ActiveCfg = SHDebug|Win32
+		{5640C591-0205-2AEC-4B05-5F49FC807CFC}.Release|Win32.Build.0 = Release|Win32
 		{CF024894-8CC7-98DC-6552-EDB51780D776}.Debug|Win32.ActiveCfg = Debug|Win32
-		{CF024894-8CC7-98DC-6552-EDB51780D776}.FinalBuild|Win32.ActiveCfg = FinalBuild|Win32
+		{CF024894-8CC7-98DC-6552-EDB51780D776}.Debug|Win32.Build.0 = Debug|Win32
 		{CF024894-8CC7-98DC-6552-EDB51780D776}.Release|Win32.ActiveCfg = Release|Win32
-		{CF024894-8CC7-98DC-6552-EDB51780D776}.SHDebug|Win32.ActiveCfg = SHDebug|Win32
+		{CF024894-8CC7-98DC-6552-EDB51780D776}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

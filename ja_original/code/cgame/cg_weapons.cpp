@@ -20,6 +20,8 @@
 /////////////////////
 #endif // _IMMERSION
 
+#include "../game/g_local.h"
+
 #ifdef _XBOX
 extern bool CL_ExtendSelectTime(void);
 #endif

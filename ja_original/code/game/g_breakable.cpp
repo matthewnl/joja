@@ -5,6 +5,7 @@
 #include "g_local.h"
 #include "g_functions.h"
 #include "..\cgame\cg_media.h"
+#include "g_navigator.h"
 
 //client side shortcut hacks from cg_local.h
 //extern void CG_SurfaceExplosion( vec3_t origin, vec3_t normal, float radius, float shake_speed, qboolean smoke );
@@ -987,7 +988,7 @@ void TieBomberThink( gentity_t *self )
 		char name1[200] = "models/players/remote/model.glm";
 		gentity_t *bomb = G_CreateObject( self, self->s.pos.trBase, self->s.apos.trBase, 0, 0, TR_GRAVITY, 0 );
 		bomb->s.modelindex = G_ModelIndex( name1 );
-		gi.G2API_InitGhoul2Model( bomb->ghoul2, name1, bomb->s.modelindex);
+		gi.G2API_InitGhoul2Model( bomb->ghoul2, name1, bomb->s.modelindex, NULL, NULL, 0, 0);
 		bomb->s.radius = 50;
 		bomb->s.eFlags |= EF_NODRAW;
 
@@ -1040,7 +1041,7 @@ void misc_model_breakable_gravity_init( gentity_t *ent, qboolean dropToFloor )
 		top[2] += 1;
 		VectorCopy( ent->currentOrigin, bottom );
 		bottom[2] = MIN_WORLD_COORD;
-		gi.trace( &tr, top, ent->mins, ent->maxs, bottom, ent->s.number, MASK_NPCSOLID );
+		gi.trace( &tr, top, ent->mins, ent->maxs, bottom, ent->s.number, MASK_NPCSOLID, G2_NOCOLLIDE, 0 );
 		if ( !tr.allsolid && !tr.startsolid && tr.fraction < 1.0 )
 		{
 			G_SetOrigin( ent, tr.endpos );

@@ -48,6 +48,8 @@
 #include "bg_vehicles.h"
 #endif
 
+#include "../cgame/cg_local.h"
+
 #ifdef _JK2MP
 //this is really horrible, but it works! just be sure not to use any locals or anything
 //with these names (exluding bool, false, true). -rww

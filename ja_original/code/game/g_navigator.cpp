@@ -9,6 +9,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 #include "g_headers.h"
 
+#include "g_nav.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -821,7 +822,7 @@ bool		ViewTrace(const CVec3& a, const CVec3& b)
 	int contents	= (CONTENTS_SOLID|CONTENTS_TERRAIN|CONTENTS_MONSTERCLIP);
 
 	mViewTraceCount++;
-	gi.trace(&mViewTrace, a.v, 0, 0, b.v, ENTITYNUM_NONE, contents);
+	gi.trace(&mViewTrace, a.v, 0, 0, b.v, ENTITYNUM_NONE, contents, G2_NOCOLLIDE, 0);
 
 	if ((mViewTrace.allsolid==qfalse) && (mViewTrace.startsolid==qfalse ) && (mViewTrace.fraction==1.0f))
 	{
@@ -838,7 +839,7 @@ bool		ViewNavTrace(const CVec3& a, const CVec3& b)
 	int contents	= (CONTENTS_SOLID|CONTENTS_TERRAIN|CONTENTS_MONSTERCLIP|CONTENTS_BOTCLIP);
 
 	mViewTraceCount++;
-	gi.trace(&mViewTrace, a.v, 0, 0, b.v, ENTITYNUM_NONE, contents);
+	gi.trace(&mViewTrace, a.v, 0, 0, b.v, ENTITYNUM_NONE, contents, G2_NOCOLLIDE, 0);
 
 	if ((mViewTrace.allsolid==qfalse) && (mViewTrace.startsolid==qfalse ) && (mViewTrace.fraction==1.0f))
 	{
@@ -875,7 +876,7 @@ bool		MoveTrace(const CVec3& Start, const CVec3& Stop, const CVec3& Mins, const 
 	// Run The Trace
 	//---------------
 	mMoveTraceCount++;
-	gi.trace(&mMoveTrace, Start.v, Mins.v, Maxs.v, Stop.v, IgnoreEnt, contents);
+	gi.trace(&mMoveTrace, Start.v, Mins.v, Maxs.v, Stop.v, IgnoreEnt, contents, G2_NOCOLLIDE, 0);
 
 
 	// Did It Make It?
@@ -894,7 +895,7 @@ bool		MoveTrace(const CVec3& Start, const CVec3& Stop, const CVec3& Mins, const 
 		// Run The Trace
 		//---------------
 		mMoveTraceCount++;
-		gi.trace(&mMoveTrace, Start.v, Mins.v, Maxs.v, Stop.v, IgnoreEnt, contents);
+		gi.trace(&mMoveTrace, Start.v, Mins.v, Maxs.v, Stop.v, IgnoreEnt, contents, G2_NOCOLLIDE, 0);
 
 		// Did It Make It?
 		//-----------------

@@ -10,6 +10,7 @@
 #include "FxScheduler.h"
 #include "..\game\wp_saber.h"
 #include "..\game\g_vehicles.h"
+#include "../game/g_local.h"
 
 extern void CG_AddSaberBlade( centity_t *cent, centity_t *scent, refEntity_t *saber, int renderfx, int modelIndex, vec3_t origin, vec3_t angles);
 extern void CG_CheckSaberInWater( centity_t *cent, centity_t *scent, int saberNum, int modelIndex, vec3_t origin, vec3_t angles );
@@ -507,12 +508,12 @@ const weaponData_t  *wData = NULL;
 					if ( cent->gent->bounceCount )
 					{//EWeb
 						gi.G2API_SetBoneAnimIndex( &cent->gent->ghoul2[cent->gent->playerModel], cent->gent->rootBone, 
-							2, 4, BONE_ANIM_OVERRIDE_FREEZE, 0.6f, cg.time );
+							2, 4, BONE_ANIM_OVERRIDE_FREEZE, 0.6f, cg.time, -1, -1 );
 					}
 					else
 					{//Emplaced Gun
 						gi.G2API_SetBoneAnimIndex( &cent->gent->ghoul2[cent->gent->playerModel], cent->gent->rootBone, 
-							0, 3, BONE_ANIM_OVERRIDE_FREEZE, 0.6f, cg.time );
+							0, 3, BONE_ANIM_OVERRIDE_FREEZE, 0.6f, cg.time, -1, -1 );
 					}
 		
 					if ( effect )

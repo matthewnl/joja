@@ -9,6 +9,7 @@
 #include "cg_media.h"
 
 #include "..\game\g_vehicles.h"
+#include "../game/g_local.h"
 
 static	pmove_t		cg_pmove;
 

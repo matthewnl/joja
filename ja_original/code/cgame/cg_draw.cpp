@@ -13,6 +13,8 @@
 #include "../client/fffx.h"
 #endif
 
+#include "../game/g_local.h"
+
 extern vmCvar_t	cg_debugHealthBars;
 
 extern Vehicle_t *G_IsRidingVehicle( gentity_t *ent );

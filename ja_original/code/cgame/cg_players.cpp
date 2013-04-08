@@ -16,6 +16,8 @@
 #define	CG_SWINGSPEED		0.3f
 
 #include "animtable.h"
+#include "../game/b_local.h"
+#include "../game/g_local.h"
 
 extern qboolean WP_SaberBladeUseSecondBladeStyle( saberInfo_t *saber, int bladeNum );
 extern void WP_SaberSwingSound( gentity_t *ent, int saberNum, swingType_t swingType );
@@ -249,7 +251,7 @@ static const char *GetCustomSound_VariantCapped(const char *ppsTable[], int iEnt
 
 	if (iVariantCap || bForceVariant1)
 	{
-		char *p = strchr(ppsTable[iEntryNum],'.');
+		char *p = const_cast<char*> (strchr(ppsTable[iEntryNum],'.'));
 		if (p && p-2 > ppsTable[iEntryNum] && isdigit(p[-1]) && !isdigit(p[-2]))
 		{
 			int iThisVariant = p[-1]-'0';
@@ -2078,7 +2080,7 @@ static void CG_G2ClientSpineAngles( centity_t *cent, vec3_t viewAngles, const ve
 			if ( !dummyGhoul2.size() )
 			{//set it up
 				int dummyHModel = cgi_R_RegisterModel( "models/players/_humanoid/_humanoid.glm" );
-				gi.G2API_InitGhoul2Model( dummyGhoul2, "models/players/_humanoid/_humanoid.glm", dummyHModel, 0 );
+				gi.G2API_InitGhoul2Model( dummyGhoul2, "models/players/_humanoid/_humanoid.glm", dummyHModel, 0, NULL, 0, 0 );
 				dummyRootBone = gi.G2API_GetBoneIndex( &dummyGhoul2[0], "model_root", qtrue );
 				dummyHipsBolt = gi.G2API_AddBolt( &dummyGhoul2[0], "pelvis" );
 			}
@@ -6439,7 +6441,7 @@ Ghoul2 Insert End
 		{
 			VectorCopy( cent->lerpOrigin, rootOrigin );
 		}
-		gi.trace( &trace, rootOrigin, NULL, NULL, cent->gent->client->ps.saber[saberNum].blade[bladeNum].muzzlePoint, cent->currentState.number, CONTENTS_SOLID );
+		gi.trace( &trace, rootOrigin, NULL, NULL, cent->gent->client->ps.saber[saberNum].blade[bladeNum].muzzlePoint, cent->currentState.number, CONTENTS_SOLID, G2_NOCOLLIDE, 0 );
 	}
 
 	if ( trace.fraction < 1.0f )
@@ -6483,11 +6485,11 @@ Ghoul2 Insert End
 		{
 			if ( i )
 			{//tracing from end to base
-				gi.trace( &trace, end, NULL, NULL, org_, cent->currentState.clientNum, traceMask );
+				gi.trace( &trace, end, NULL, NULL, org_, cent->currentState.clientNum, traceMask, G2_NOCOLLIDE, 0 );
 			}
 			else
 			{//tracing from base to end
-				gi.trace( &trace, org_, NULL, NULL, end, cent->currentState.clientNum, traceMask|CONTENTS_WATER|CONTENTS_SLIME );
+				gi.trace( &trace, org_, NULL, NULL, end, cent->currentState.clientNum, traceMask|CONTENTS_WATER|CONTENTS_SLIME, G2_NOCOLLIDE, 0 );
 			}
 			
 			if ( trace.fraction < 1.0f )

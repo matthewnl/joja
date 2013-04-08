@@ -1,6 +1,8 @@
 // leave this line at the top of all AI_xxxx.cpp files for PCH reasons...
 #include "g_headers.h"
 
+#include "b_local.h"
+
 //custom anims:
 	//both_attack1 - running attack
 	//both_attack2 - crouched attack

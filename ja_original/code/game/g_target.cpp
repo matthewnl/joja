@@ -5,6 +5,8 @@
 #include "Q3_Interface.h"
 #include "g_local.h"
 #include "g_functions.h"
+#include "../cgame/cg_local.h"
+
 extern void G_SetEnemy( gentity_t *self, gentity_t *enemy );
 
 //==========================================================
@@ -265,7 +267,7 @@ void target_laser_think (gentity_t *self) {
 	// fire forward and see what we hit
 	VectorMA (self->s.origin, 2048, self->movedir, end);
 
-	gi.trace( &tr, self->s.origin, NULL, NULL, end, self->s.number, CONTENTS_SOLID|CONTENTS_BODY|CONTENTS_CORPSE);
+	gi.trace( &tr, self->s.origin, NULL, NULL, end, self->s.number, CONTENTS_SOLID|CONTENTS_BODY|CONTENTS_CORPSE, G2_NOCOLLIDE, 0);
 
 	if ( tr.entityNum ) {
 		// hurt it if we can

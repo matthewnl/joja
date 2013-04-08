@@ -5,6 +5,7 @@
 #include "b_local.h"
 
 #include "..\Ratl\vector_vs.h"
+#include "g_navigator.h"
 
 #define MAX_PACKS			10
 

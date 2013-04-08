@@ -7,6 +7,8 @@
 #include "g_functions.h"
 #include "g_items.h"
 #include "wp_saber.h"
+#include "b_local.h"
+#include "../cgame/cg_local.h"
 
 extern qboolean	missionInfo_Updated;
 
@@ -1127,12 +1129,12 @@ void FinishSpawningItem( gentity_t *ent ) {
 		}
 		//NOTE:  should I keep this string around for any reason?  Will I ever need it later?
 		//ent->??? = G_NewString( itemSaber.model );
-		gi.G2API_InitGhoul2Model( ent->ghoul2, itemSaber.model, G_ModelIndex( itemSaber.model ));
+		gi.G2API_InitGhoul2Model( ent->ghoul2, itemSaber.model, G_ModelIndex( itemSaber.model ), NULL, NULL, 0, 0);
 		WP_SaberFreeStrings(itemSaber);
 	}
 	else
 	{
-		gi.G2API_InitGhoul2Model( ent->ghoul2, ent->item->world_model, G_ModelIndex( ent->item->world_model ));
+		gi.G2API_InitGhoul2Model( ent->ghoul2, ent->item->world_model, G_ModelIndex( ent->item->world_model ), NULL, NULL, 0, 0);
 	}
 
 	// Set crystal ammo amount based on skill level
@@ -1167,7 +1169,7 @@ void FinishSpawningItem( gentity_t *ent ) {
 	{
 		// drop to floor
 		VectorSet( dest, ent->s.origin[0], ent->s.origin[1], MIN_WORLD_COORD );
-		gi.trace( &tr, ent->s.origin, ent->mins, ent->maxs, dest, ent->s.number, MASK_SOLID|CONTENTS_PLAYERCLIP );
+		gi.trace( &tr, ent->s.origin, ent->mins, ent->maxs, dest, ent->s.number, MASK_SOLID|CONTENTS_PLAYERCLIP, G2_NOCOLLIDE, 0 );
 		if ( tr.startsolid ) 
 		{
 			if ( &g_entities[tr.entityNum] != NULL )
@@ -1503,7 +1505,7 @@ void G_RunItem( gentity_t *ent ) {
 				ignore = ent->activator->s.number;
 			}
 			VectorSet( origin, ent->currentOrigin[0], ent->currentOrigin[1], ent->currentOrigin[2]-1 ); 
-			gi.trace( &tr, ent->currentOrigin, ent->mins, ent->maxs, origin, ignore, mask );
+			gi.trace( &tr, ent->currentOrigin, ent->mins, ent->maxs, origin, ignore, mask, G2_NOCOLLIDE, 0 );
 			if ( !tr.allsolid
 				&& !tr.startsolid
 				&& tr.fraction > 0.001f )
@@ -1542,7 +1544,7 @@ void G_RunItem( gentity_t *ent ) {
 	{
 		ignore = ent->activator->s.number;
 	}
-	gi.trace( &tr, ent->currentOrigin, ent->mins, ent->maxs, origin, ignore, mask );
+	gi.trace( &tr, ent->currentOrigin, ent->mins, ent->maxs, origin, ignore, mask, G2_NOCOLLIDE, 0 );
 
 	VectorCopy( tr.endpos, ent->currentOrigin );
 

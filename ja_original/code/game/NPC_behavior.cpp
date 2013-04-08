@@ -10,6 +10,9 @@ we need it...
 #include "g_headers.h"
 #include "g_navigator.h"
 #include "Q3_Interface.h"
+#include "g_functions.h"
+#include "g_nav.h"
+#include "b_local.h"
 
 extern cvar_t	*g_AIsurrender;
 extern	qboolean	showBBoxes;
@@ -87,13 +90,13 @@ void NPC_BSAdvanceFight (void)
 					trace_t		tr;
 					gentity_t	*traceEnt;
 					//are we gonna hit him if we shoot at his center?
-					gi.trace ( &tr, muzzle, NULL, NULL, enemy_org, NPC->s.number, MASK_SHOT );
+					gi.trace ( &tr, muzzle, NULL, NULL, enemy_org, NPC->s.number, MASK_SHOT, G2_NOCOLLIDE, 0 );
 					traceEnt = &g_entities[tr.entityNum];
 					if( traceEnt != NPC->enemy &&
 						(!traceEnt || !traceEnt->client || !NPC->client->enemyTeam || NPC->client->enemyTeam != traceEnt->client->playerTeam) )
 					{//no, so shoot for the head
 						attack_scale *= 0.75;
-						gi.trace ( &tr, muzzle, NULL, NULL, enemy_head, NPC->s.number, MASK_SHOT );
+						gi.trace ( &tr, muzzle, NULL, NULL, enemy_head, NPC->s.number, MASK_SHOT, G2_NOCOLLIDE, 0 );
 						traceEnt = &g_entities[tr.entityNum];
 					}
 
