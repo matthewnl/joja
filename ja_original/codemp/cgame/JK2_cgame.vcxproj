@@ -1,16 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug(SH)|Win32">
-      <Configuration>Debug(SH)</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Final|Win32">
-      <Configuration>Final</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
@@ -19,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>JK2cgame</ProjectName>
+    <ProjectName>cgame_ja_mp</ProjectName>
     <SccProjectName>
     </SccProjectName>
     <SccAuxPath />
@@ -27,94 +19,40 @@
     </SccLocalPath>
     <SccProvider>
     </SccProvider>
+    <ProjectGuid>{5276801D-6643-4DB8-89C6-158596A1FFE2}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_core.props" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_debug.props" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_cgame_ja_mp.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_core.props" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_release.props" />
+    <Import Project="..\..\..\prj\win32_vs2012\props\joja_cgame_ja_mp.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\../Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\../Release/JK2cgame\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">.\../Final\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">.\../Final/JK2cgame\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\../Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\../Debug/JK2cgame\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'">Debug(SH)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'">Debug(SH)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'">true</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..;./../game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;MISSIONPACK;_JK2;CGAME;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <MinimalRebuild>true</MinimalRebuild>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\../Release/JK2cgame/JK2_cgame.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../Release/JK2cgame/</AssemblerListingLocation>
-      <ObjectFileName>.\../Release/JK2cgame/</ObjectFileName>
-      <ProgramDataBaseFileName>.\../Release/JK2cgame/</ProgramDataBaseFileName>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
+    <ClCompile />
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../Release/cgamex86.dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\JK2_cgame.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\../Release/cgamex86.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>../Release/cgamex86.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <SetChecksum>true</SetChecksum>
-      <BaseAddress>0x30000000</BaseAddress>
-      <ImportLibrary>.\../Release/cgamex86.lib</ImportLibrary>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -123,93 +61,12 @@
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>.\../Release/JK2_cgame.tlb</TypeLibraryName>
     </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">
-    <ClCompile>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..;./../game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;MISSIONPACK;WIN32;CGAME;_JK2;FINAL_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\../Final/JK2cgame/JK2_cgame.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../Final/JK2cgame/</AssemblerListingLocation>
-      <ObjectFileName>.\../Final/JK2cgame/</ObjectFileName>
-      <ProgramDataBaseFileName>.\../Final/JK2cgame/</ProgramDataBaseFileName>
-      <WarningLevel>Level4</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../Final/cgamex86.dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\JK2_cgame.def</ModuleDefinitionFile>
-      <ProgramDatabaseFile>
-      </ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>.\../Final/cgamex86.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <OptimizeReferences>true</OptimizeReferences>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <SetChecksum>true</SetChecksum>
-      <BaseAddress>0x30000000</BaseAddress>
-      <ImportLibrary>.\../Final/cgamex86.lib</ImportLibrary>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Final/JK2_cgame.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDebug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
+    <ResourceCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;./../game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;MISSIONPACK;CGAME;_JK2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\../Debug/JK2cgame/JK2_cgame.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../Debug/JK2cgame/</AssemblerListingLocation>
-      <ObjectFileName>.\../Debug/JK2cgame/</ObjectFileName>
-      <ProgramDataBaseFileName>.\../Debug/JK2cgame/</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
+    <ClCompile />
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\Debug\cgamex86.dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\JK2_cgame.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\../Debug/cgamex86.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>.\../Debug/cgamex86.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <BaseAddress>0x30000000</BaseAddress>
-      <ImportLibrary>.\../Debug/cgamex86.lib</ImportLibrary>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -218,55 +75,7 @@
       <TargetEnvironment>Win32</TargetEnvironment>
       <TypeLibraryName>.\../Debug/JK2_cgame.tlb</TypeLibraryName>
     </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..;./../game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;MISSIONPACK;CGAME;_JK2;JK2AWARDS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\../Debug/JK2cgame/JK2_cgame.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../Debug/JK2cgame/</AssemblerListingLocation>
-      <ObjectFileName>.\../Debug/JK2cgame/</ObjectFileName>
-      <ProgramDataBaseFileName>.\../Debug/JK2cgame/</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <Link>
-      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\Debug\cgamex86.dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\JK2_cgame.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\../Debug/cgamex86.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>.\../Debug/JK2cgame/cgamex86.map</MapFileName>
-      <SubSystem>Windows</SubSystem>
-      <BaseAddress>0x30000000</BaseAddress>
-      <ImportLibrary>.\../Debug/cgamex86.lib</ImportLibrary>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\../Debug/JK2_cgame.tlb</TypeLibraryName>
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_Debug;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
+    <ResourceCompile />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\game\AnimalNPC.c" />
@@ -275,9 +84,7 @@
     <ClCompile Include="..\game\WalkerNPC.c" />
     <ClCompile Include="..\game\bg_g2_utils.c" />
     <ClCompile Include="..\game\bg_lib.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug(SH)|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Final|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\game\bg_misc.c" />
@@ -353,8 +160,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="JK2_cgame.def" />
-    <None Include="cgame.bat" />
-    <None Include="cgame.q3asm" />
+    <None Include="cgame.bat">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="cgame.q3asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\win32\JK2cgame.rc" />

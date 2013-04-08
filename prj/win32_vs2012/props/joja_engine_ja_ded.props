@@ -3,15 +3,15 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <TargetName>uix86</TargetName>
+    <TargetName>jaded</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_JK2;MISSIONPACK;UI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;BOTLIB;DEDICATED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>ui.def</ModuleDefinitionFile>
-      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>winmm.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

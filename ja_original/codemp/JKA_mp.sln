@@ -1,49 +1,41 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JK2cgame", "cgame\JK2_cgame.vcxproj", "{5276801D-6643-4DB8-89C6-158596A1FFE2}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cgame_ja_mp", "cgame\JK2_cgame.vcxproj", "{5276801D-6643-4DB8-89C6-158596A1FFE2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JK2game", "game\JK2_game.vcxproj", "{830B5A34-71EA-1514-3E04-B83D9389E0E6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "game_ja_mp", "game\JK2_game.vcxproj", "{830B5A34-71EA-1514-3E04-B83D9389E0E6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinDed", "WinDed.vcxproj", "{B54CDE7A-09E0-F73D-C215-F43ED48AE206}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine_ja_ded", "WinDed.vcxproj", "{B54CDE7A-09E0-F73D-C215-F43ED48AE206}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "botlib", "botlib\botlib.vcxproj", "{5348DA13-A290-8D6B-AB68-18F56F1115C9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "engine_ja_mp", "jk2mp.vcxproj", "{33F0A841-5E00-10AF-B1FE-E1CE6E715873}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "exe", "jk2mp.vcxproj", "{33F0A841-5E00-10AF-B1FE-E1CE6E715873}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ui", "ui\ui.vcxproj", "{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ui_ja_mp", "ui\ui.vcxproj", "{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug(SH)|Win32 = Debug(SH)|Win32
 		Debug|Win32 = Debug|Win32
-		Final|Win32 = Final|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Debug(SH)|Win32.ActiveCfg = Debug(SH)|Win32
 		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Final|Win32.ActiveCfg = Final|Win32
+		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Debug|Win32.Build.0 = Debug|Win32
 		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Release|Win32.ActiveCfg = Release|Win32
-		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Debug(SH)|Win32.ActiveCfg = Debug(SH)|Win32
+		{5276801D-6643-4DB8-89C6-158596A1FFE2}.Release|Win32.Build.0 = Release|Win32
 		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Debug|Win32.ActiveCfg = Debug|Win32
-		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Final|Win32.ActiveCfg = Final|Win32
+		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Debug|Win32.Build.0 = Debug|Win32
 		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Release|Win32.ActiveCfg = Release|Win32
-		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Debug(SH)|Win32.ActiveCfg = Debug|Win32
+		{830B5A34-71EA-1514-3E04-B83D9389E0E6}.Release|Win32.Build.0 = Release|Win32
 		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Debug|Win32.ActiveCfg = Debug|Win32
-		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Final|Win32.ActiveCfg = Release|Win32
+		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Debug|Win32.Build.0 = Debug|Win32
 		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Release|Win32.ActiveCfg = Release|Win32
-		{5348DA13-A290-8D6B-AB68-18F56F1115C9}.Debug(SH)|Win32.ActiveCfg = Debug(SH)|Win32
-		{5348DA13-A290-8D6B-AB68-18F56F1115C9}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5348DA13-A290-8D6B-AB68-18F56F1115C9}.Final|Win32.ActiveCfg = Final|Win32
-		{5348DA13-A290-8D6B-AB68-18F56F1115C9}.Release|Win32.ActiveCfg = Release|Win32
-		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Debug(SH)|Win32.ActiveCfg = Debug(SH)|Win32
+		{B54CDE7A-09E0-F73D-C215-F43ED48AE206}.Release|Win32.Build.0 = Release|Win32
 		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Debug|Win32.ActiveCfg = Debug|Win32
-		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Final|Win32.ActiveCfg = Final|Win32
+		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Debug|Win32.Build.0 = Debug|Win32
 		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Release|Win32.ActiveCfg = Release|Win32
-		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Debug(SH)|Win32.ActiveCfg = Debug(SH)|Win32
+		{33F0A841-5E00-10AF-B1FE-E1CE6E715873}.Release|Win32.Build.0 = Release|Win32
 		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Debug|Win32.ActiveCfg = Debug|Win32
-		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Final|Win32.ActiveCfg = Final|Win32
+		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Debug|Win32.Build.0 = Debug|Win32
 		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Release|Win32.ActiveCfg = Release|Win32
+		{B657A935-AD89-96FF-D5EC-0B99CC3B0BFF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,27 +51,22 @@ Global
 		SccProjectName1 = \u0022$/jedi/codemp/game\u0022,\u0020EGAAAAAA
 		SccLocalPath1 = game
 		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
 		SccProjectUniqueName2 = WinDed.vcproj
 		SccProjectName2 = \u0022$/jedi/codemp\u0022,\u0020CAAAAAAA
 		SccLocalPath2 = .
 		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
 		SccProjectUniqueName3 = botlib\\botlib.vcproj
 		SccProjectName3 = \u0022$/jedi/codemp/botlib\u0022,\u0020EAAAAAAA
 		SccLocalPath3 = botlib
 		SccProvider3 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
 		SccProjectUniqueName4 = jk2mp.vcproj
 		SccProjectName4 = \u0022$/jedi/codemp\u0022,\u0020CAAAAAAA
 		SccLocalPath4 = .
 		SccProvider4 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
 		SccProjectUniqueName5 = ui\\ui.vcproj
 		SccProjectName5 = \u0022$/jedi/codemp/ui\u0022,\u0020YSAAAAAA
 		SccLocalPath5 = ui
 		SccProvider5 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
-		CanCheckoutShared = true
 	EndGlobalSection
 	GlobalSection(DevPartner) = postSolution
 	EndGlobalSection

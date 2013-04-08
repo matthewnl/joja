@@ -78,6 +78,9 @@
     <Filter Include="Ratl">
       <UniqueIdentifier>{4974b1ca-8239-4d4e-81a2-d6b6aa5ba237}</UniqueIdentifier>
     </Filter>
+    <Filter Include="botlib">
+      <UniqueIdentifier>{b631ca69-67ea-4993-b5ef-1a8d8901f45d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game\anims.h">
@@ -1101,6 +1104,90 @@
     </ClCompile>
     <ClCompile Include="icarus\TaskManager.cpp">
       <Filter>ICARUS</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_bspq3.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_cluster.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_debug.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_entity.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_file.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_main.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_move.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_optimize.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_reach.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_route.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_routealt.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_aas_sample.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_char.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_chat.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_gen.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_goal.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_move.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_weap.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ai_weight.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_ea.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\be_interface.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_crc.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_libvar.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_log.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_memory.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_precomp.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_script.cpp">
+      <Filter>botlib</Filter>
+    </ClCompile>
+    <ClCompile Include="botlib\l_struct.cpp">
+      <Filter>botlib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

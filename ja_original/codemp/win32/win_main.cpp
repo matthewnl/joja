@@ -25,7 +25,7 @@ static char		sys_cmdline[MAX_STRING_CHARS];
 
 // enable this for executable checksumming
 #ifdef FINAL_BUILD
-#define SPANK_MONKEYS
+//#define SPANK_MONKEYS
 #endif
 static int	sys_monkeySpank;
 static int	sys_checksum;
@@ -696,11 +696,12 @@ Return true if the proper CD is in the drive
 ================
 */
 qboolean	Sys_CheckCD( void ) {
-#ifdef FINAL_BUILD
-	return Sys_ScanForCD();
-#else
-	return qtrue;
-#endif
+//#ifdef FINAL_BUILD
+//	return Sys_ScanForCD();
+//#else
+//	return qtrue;
+//#endif
+    return qtrue;
 }
 
 

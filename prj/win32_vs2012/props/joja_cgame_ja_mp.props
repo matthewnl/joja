@@ -3,14 +3,15 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <TargetName>uix86</TargetName>
+    <TargetName>cgamex86</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_JK2;MISSIONPACK;UI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..;../game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_JK2;CGAME;MISSIONPACK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>ui.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>jk2_cgame.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>

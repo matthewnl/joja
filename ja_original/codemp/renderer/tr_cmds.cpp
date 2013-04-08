@@ -138,6 +138,10 @@ render thread if needed.
 ============
 */
 void *R_GetCommandBuffer( int bytes ) {
+    // BBI FIXME Without it crashes on high resolutions.
+    if (!tr.registered)
+        return NULL;
+
 	renderCommandList_t	*cmdList;
 
 	cmdList = &backEndData->commands;

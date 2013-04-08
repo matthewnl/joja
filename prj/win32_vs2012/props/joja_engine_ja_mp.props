@@ -3,15 +3,16 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <TargetName>uix86</TargetName>
+    <TargetName>jamp</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_JK2;MISSIONPACK;UI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;_JK2;_JK2MP;BOTLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>ui.def</ModuleDefinitionFile>
+      <AdditionalDependencies>alut.lib;openal32.lib;winmm.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
+      <StackReserveSize>8388608</StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

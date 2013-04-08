@@ -935,7 +935,7 @@ bool GL_CheckForExtension(const char *ext)
 	char	*temp;
 	char	term;
 
-	temp = strstr(glConfig.extensions_string, ext);
+	temp = const_cast<char*> (strstr(glConfig.extensions_string, ext));
 	if(!temp)
 	{
 		return(false);

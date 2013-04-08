@@ -3,14 +3,15 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <TargetName>uix86</TargetName>
+    <TargetName>jampgamex86</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_JK2;MISSIONPACK;UI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MISSIONPACK;QAGAME;_JK2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>ui.def</ModuleDefinitionFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>jk2_game.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
